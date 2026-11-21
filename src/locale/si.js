@@ -56,15 +56,15 @@ export default moment.defineLocale('si', {
     ordinal: function (number) {
         return number + ' වැනි';
     },
-    meridiemParse: /පෙර වරු|පස් වරු|පෙ.ව|ප.ව./,
+    meridiemParse: /පෙරවරු|පස්වරු|පෙ.ව.|ප.ව./,
     isPM: function (input) {
-        return input === 'ප.ව.' || input === 'පස් වරු';
+        return input === 'ප.ව.' || input === 'පස්වරු';
     },
     meridiem: function (hours, minutes, isLower) {
         if (hours > 11) {
-            return isLower ? 'ප.ව.' : 'පස් වරු';
+            return isLower ? 'ප.ව.' : 'පස්වරු';
         } else {
-            return isLower ? 'පෙ.ව.' : 'පෙර වරු';
+            return isLower ? 'පෙ.ව.' : 'පෙරවරු';
         }
     },
 });
